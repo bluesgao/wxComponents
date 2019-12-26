@@ -1,0 +1,45 @@
+<view class="xx-nav-bar-container">
+    <!-- top -->
+    <view class="xx-nav-bar-container-top">
+        <!-- top-left -->
+        <view class="xx-nav-bar-container-top-left">
+            <!-- top-right-back -->
+            <block wx:if="{{needBack}}">
+                <view class="xx-nav-bar-container-top-right-back">
+                    <!-- back -->
+                    <text>needBack:{{needBack}}</text>
+                </view>
+            </block>
+            <!-- top-right-home -->
+            <block wx:if="{{needHome}}">
+                <view class="xx-nav-bar-container-top-right-home">
+                    <!-- home -->
+                    <text>needHome:{{needHome}}</text>
+                </view>
+            </block>
+        </view>
+        <!-- top-right -->
+        <view class="xx-nav-bar-container-top-right">
+            <block wx:if="{{title}}">
+                <text class='xx-nav-bar-container-top-right-title'>{{title}}</text>
+            </block>
+        </view>
+    </view>
+    <!-- bottom -->
+    <view class="xx-nav-bar-container-bottom">
+        <!-- bottom-search -->
+        <block wx:if="{{needSearch}}">
+            <view class="xx-nav-bar-container-bottom-search">
+                <!-- search -->
+                <text>needSearch:{{needSearch}}</text>
+            </view>
+        </block>
+        <!-- bottom-tab -->
+        <block wx:if="{{needTab}}">
+            <view class="xx-nav-bar-container-bottom-tab">
+                <!-- tab -->
+                <text>needTab:{{needTab}}</text>
+            </view>
+        </block>
+    </view>
+</view>

@@ -7,7 +7,12 @@ Page({
     motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    //顶部导航栏设置
+    navBarCfg:{
+      needHome:true,
+      needBack: true
+    }
   },
   //事件处理函数
   bindViewTap: function() {

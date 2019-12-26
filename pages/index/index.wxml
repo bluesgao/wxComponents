@@ -1,6 +1,7 @@
-<!--index.wxml-->
+<!-- index.wxml -->
 <view class="container">
-    <navBar title='有返回和home' background='#999999' back="{{true}}" home="{{true}}" bindback="handlerGobackClick" bindhome="handlerGohomeClick"></navBar>
+    <!-- <navBar title='有返回和home' background='#999999' back="{{true}}" home="{{true}}" bindback="handlerGobackClick" bindhome="handlerGohomeClick"></navBar> -->
+    <xxNavBar title='测试导航栏' needHome='true' needBack='true'></xxNavBar>
     <view class='main'>
         <view class='p'>有返回和home的页面</view>
     </view>
