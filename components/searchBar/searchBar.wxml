@@ -1,0 +1,10 @@
+<view class="search-bar-container"  style="background-color:{{backgroundColor}};">
+    <view class="search-bar-container-box">
+        <icon type='search'></icon>
+        <input type="text" bindinput="input" bindconfirm="confirm" bindfocus='focus' bindblur="blur" confirm-type='search' value='{{content}}' placeholder='请输入...' />
+        <block wx:if="{{clearFlag}}">
+            <icon bindtap="clear" type='clear'></icon>
+        </block>
+    </view>
+    <!-- <view bindtap='cancelSearch' class="activity-search">取消</view> -->
+</view>

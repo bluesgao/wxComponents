@@ -1,0 +1,35 @@
+/*搜索 开始*/
+.search-bar-container{
+  width: calc( 100% - 0);
+  background:#e0fa4c;
+  height: 90rpx;
+  padding:20rpx 20rpx;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+.search-bar-container-box{
+    width: 100%;
+    height: 60rpx;
+    display: flex;
+    align-items: center;
+    border-radius: 30rpx;
+    background: #F5F5F5;
+}
+
+/*开始搜索时*/
+.search-bar-container-box .start-search{
+  width: calc( 100% - 102rpx );
+}
+
+.search-bar-container-box icon{
+  margin: 10rpx;
+  size: 24rpx;
+
+}
+.search-bar-container-box input{
+  height:60rpx;
+  line-height:60rpx;
+  font-size:24rpx;
+  width:100%;
+}
