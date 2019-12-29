@@ -3,19 +3,23 @@ const app= getApp();
 Component({
 
     properties: {
-        title: {
+        backgroundColor: {//背景色
+            type: String,
+            value: 'rgba(255, 255, 255, 1)'
+        },
+        title: {//导航栏-名称
             type: String,
             value: 'Wechat'
         },
-        back: {
+        back: {//是否需要显示返回上一页按钮
             type: Boolean,
             value: false
         },
-        home: {
+        home: {//是否需要显示返回首页按钮
             type: Boolean,
             value: false
         },
-        search: {
+        search: {//是否需要显示搜索框
             type: Boolean,
             value: false
         },
@@ -23,14 +27,10 @@ Component({
             type: String,
             value: ''
         },
-        clearFlag: {//是否显示clear按钮
+        clearFlag: {//搜索框是否显示clear按钮
             type: Boolean,
             value: false,
-        },
-        backgroundColor: {//背景色
-            type: String,
-            value: 'rgba(255, 255, 255, 1)'
-        },
+        }
     },
 
     data: {
@@ -47,21 +47,70 @@ Component({
         this.setStyle(); //设置样式
     },
     methods: {
+        //导航栏-回到首页
         goHome: function () {
             console.info("goHome")
         },
+        //导航栏-回到上一页
         goBack: function () {
             console.info("goBack")
             wx.navigateBack({
                 delta: 1
             })
         },
+        //搜索框-获得焦点
+        focus() {
+            console.info("获得焦点");
+        },
+        //搜索框-失去焦点
+        blur() {
+            console.info('失去焦点')
+        },
+        //搜索框-输入
+        input(e) {
+            console.info('搜索输入', e)
+            this.setData({
+                content: e.detail.value,
+            })
+            console.info('搜索输入 content', this.data.content)
+
+            //如果输入数据长度不为空，则显示清除按钮
+            //反之，不显示清除按钮
+            if (this.data.content != '') {
+                this.setData({
+                    clearFlag: true,
+                })
+            } else {
+                this.setData({
+                    clearFlag: false,
+                })
+            }
+            //this.triggerEvent("searchList", e);
+        },
+        //搜索框-查询
+        confirm(e) {
+            console.info('查询', e)
+            this.triggerEvent("endsearchList");
+        },
+        //搜索框-清空
+        clear(e) {
+            console.info("清空搜索框", e);
+            console.info('清空搜索框前 content', this.data.content)
+            this.setData({
+                content: '',
+                clearFlag: false,
+            })
+            console.info('清空搜索框后 content', this.data.content)
+            //this.triggerEvent("clearSearch");
+        },
+        //设置样式（状态栏高度，导航栏高度）
         setStyle: function () {
             this.setData({
                 statusBarHeight: app.globalSystemInfo.statusBarHeight,
                 navBarHeight: app.globalSystemInfo.navBarHeight,
             })
         },
+        //获取系统参数
         getSystemInfo() {
             var app = getApp();
             if (app.globalSystemInfo && !app.globalSystemInfo.ios) {

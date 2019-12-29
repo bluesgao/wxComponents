@@ -7,7 +7,7 @@
     left: 0;
 }
 
-.navbar-center {
+.navbar-capsule-title {
     height: 44px;
     display: flex;
     align-items: center;
@@ -55,7 +55,7 @@
     white-space: nowrap;
 }
 
-.search-bar-container {
+.search-bar-inner {
     height: 44px;
     /* padding: 0px 10px; */
     /* 两个参数，第一个用于上、下，第二个用于左、右
@@ -66,7 +66,7 @@
     overflow: hidden;
 }
 
-.search-bar-container-box {
+.search-bar {
     width: 100%;
     height: 32px;
     display: flex;
@@ -76,12 +76,12 @@
     margin: 6px 10px 6px 10px;
 }
 
-.search-bar-container-box icon {
+.search-bar icon {
     margin: 10px;
     size: 24px;
 }
 
-.search-bar-container-box input {
+.search-bar input {
     height: 32px;
     line-height: 32px;
     font-size: 14px;
