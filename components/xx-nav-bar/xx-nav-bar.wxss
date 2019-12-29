@@ -47,7 +47,8 @@
     position: absolute;
     left: 104px;
     right: 104px;
-    font-size: 16px;
+  font-size: 17px;
+  line-height: 17px;
     text-align: center;
     overflow: hidden;
     text-overflow: ellipsis;

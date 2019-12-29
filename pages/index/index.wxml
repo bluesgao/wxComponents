@@ -2,8 +2,6 @@
 <view class="container">
     <!-- <navBar back='true' home='true' title='测试导航栏111'></navBar> -->
     <xxNavBar title='测试导航栏' back='true' home='true' search="true" backgroundColor='#123123'>
-        <!-- <view style="height: 44px;">这里是插入到组件slot中的内容</view> -->
-        <searchBar backgroundColor='#e0fa4c' content="{{searchContent}}"></searchBar>
     </xxNavBar>
     <view class='main'>
         <view class='p'>有返回和home的页面</view>
