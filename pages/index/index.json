@@ -1,6 +1,8 @@
 {
   "usingComponents": {
     "navBar": "/components/navBar/navBar",
-    "xxNavBar": "/components/xx-nav-bar/xx-nav-bar"
+    "xxNavBar": "/components/xx-nav-bar/xx-nav-bar",
+        "searchBar": "/components/searchBar/searchBar"
+        
   }
 }
