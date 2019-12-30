@@ -1,0 +1,32 @@
+.scroll-tab {
+    height: 60rpx;
+    width: 100%;
+    white-space: nowrap;
+    color: #8a89df;
+}
+
+.scroll-tab-item {
+    line-height: 40rpx;
+    margin: 10rpx 10rpx;
+    font-size: 30rpx;
+    color: black;
+    display: inline-block;
+    align-items: center;
+    padding-left: 8rpx;
+    padding-right: 8rpx;
+}
+
+.scroll-tab-item:first-child {
+    /* padding-left: 16rpx; */
+}
+
+.scroll-tab-item:last-child {
+    /* padding-right: 16rpx; */
+}
+
+.tab-active {
+    color: rgb(80, 79, 76);
+    border: 1px solid rgb(80, 79, 76);
+    border-radius: 14px;
+    background: rgb(228, 216, 108);
+}

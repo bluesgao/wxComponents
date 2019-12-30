@@ -1,6 +1,7 @@
 {
-  "usingComponents": {
-    "navBar": "/components/navBar/navBar",
-    "searchBar": "/components/searchBar/searchBar"
-  }
+    "usingComponents": {
+        "navBar": "/components/navBar/navBar",
+        "searchBar": "/components/searchBar/searchBar",
+        "scrollTabBar": "/components/scrollTabBar/scrollTabBar"
+    }
 }
