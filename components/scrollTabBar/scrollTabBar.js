@@ -1,7 +1,7 @@
 Component({
   data: {
     tabList: ['今', '烟', '净'],
-    current: 0
+    currentTab: 0
   },
   properties: {
     tabList: {

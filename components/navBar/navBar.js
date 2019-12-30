@@ -1,4 +1,4 @@
-const app= getApp();
+const app = getApp();
 
 Component({
 
@@ -30,12 +30,18 @@ Component({
         clearFlag: {//搜索框是否显示clear按钮
             type: Boolean,
             value: false,
+        },
+        tabList: {//tab栏项目
+            type: Array,
+            value: []
         }
     },
 
     data: {
         statusBarHeight: 0,
-        navBarHeight: 0
+        navBarHeight: 0,
+        // tabList: [],
+        currentTab: 0
     },
 
     created: function () {
@@ -67,7 +73,7 @@ Component({
         //搜索框-失去焦点
         blur(e) {
             console.info('失去焦点')
-            this.triggerEvent("searchBlur",e)
+            this.triggerEvent("searchBlur", e)
         },
         //搜索框-输入
         input(e) {
@@ -106,6 +112,16 @@ Component({
             console.info('清空搜索框后 content', this.data.content)
             this.triggerEvent("searchClear");
         },
+        //tab栏-选择
+        selectTab: function (e) {
+            console.info('selectTab ', e)
+            console.info('selectTab currentTarget', e.currentTarget.dataset.index)
+            this.setData({
+                currentTab: e.currentTarget.dataset.index,
+            })
+            console.info('selectTab data ', this.data)
+        },
+
         //设置样式（状态栏高度，导航栏高度）
         setStyle: function () {
             this.setData({

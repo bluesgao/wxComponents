@@ -1,7 +1,7 @@
 <!-- index.wxml -->
 <view class="container">
-    <!-- <navBar title='测试导航栏' search="true" backgroundColor='#123123'></navBar> -->
-    <scrollTabBar tabList="{{tabList}}"></scrollTabBar>
+    <navBar title='测试导航栏qqqqqqqqqqqqqqq' tabList="{{tabList}}" backgroundColor='#123123' ></navBar>
+    <!-- <scrollTabBar tabList="{{tabList}}"></scrollTabBar> -->
     <view class='main'>
         <view class='p'>有返回和home的页面</view>
     </view>

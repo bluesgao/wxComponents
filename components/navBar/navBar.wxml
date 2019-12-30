@@ -25,5 +25,14 @@
                 </block>
             </view>
         </view>
+        <!-- 扩展点-tab栏 大于3个tab页才显示-->
+        <view class="tab-bar-inner" wx:if="{{tabList.length>3}}">
+            <!-- 导航滚动 -->
+            <scroll-view class="scroll-tab" scroll-x="true">
+                <view bindtap="selectTab" id="NAV{{index}}" class="scroll-tab-item {{index ===  currentTab ? 'tab-active' : ''}}" data-index="{{index}}" wx:for="{{tabList}}" wx:key="key">
+                    {{item}}
+                </view>
+            </scroll-view>
+        </view>
     </view>
 </view>

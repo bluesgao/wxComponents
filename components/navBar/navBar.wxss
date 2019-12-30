@@ -1,3 +1,5 @@
+/* 顶部导航栏样式----开始----------------- */
+
 .navbar-inner {
     width: 100%;
     background-color: #ce9e9e;
@@ -47,20 +49,23 @@
     position: absolute;
     left: 104px;
     right: 104px;
-  font-size: 17px;
-  line-height: 17px;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 20px;
     text-align: center;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
 }
 
+/* 顶部导航栏样式----结束----------------- */
+
+/* 顶部搜索栏样式----开始----------------- */
+
 .search-bar-inner {
     height: 44px;
-    /* padding: 0px 10px; */
-    /* 两个参数，第一个用于上、下，第二个用于左、右
-     四个参数，将按上、右、下、左的顺序作用于四边*/
-    /* margin: 0px 10px 10px 10px; */
+    /* padding: 0px 10px; *//* 两个参数，第一个用于上、下，第二个用于左、右
+     四个参数，将按上、右、下、左的顺序作用于四边*//* margin: 0px 10px 10px 10px; */
     display: flex;
     align-items: center;
     overflow: hidden;
@@ -87,3 +92,46 @@
     font-size: 14px;
     width: 100%;
 }
+
+/* 顶部搜索栏样式----结束----------------- */
+
+/* 顶部滚动tab栏样式----开始----------------- */
+
+.scroll-tab {
+    height: 44px;
+    width: 100%;
+    white-space: nowrap;
+    color: #8a89df;
+}
+
+.scroll-tab-item {
+    line-height: 32px;
+    /*/margin两个参数，第一个用于上、下，第二个用于左、右*/
+    margin: 0px 6px;
+    font-size: 16px;
+    color: black;
+    display: inline-block;
+    align-items: center;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.scroll-tab-item:first-child {
+    /* padding-left: 16rpx; */
+}
+
+.scroll-tab-item:last-child {
+    /* padding-right: 16rpx; */
+}
+
+.tab-active {
+    color: rgb(80, 79, 76);
+    border: 1px solid rgb(80, 79, 76);
+    border-radius: 16px;
+    background: rgb(228, 216, 108);
+    /* 选中的tab名称字体加大加粗 */
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* 顶部滚动tab栏样式----结束----------------- */
