@@ -59,12 +59,15 @@ Component({
             })
         },
         //搜索框-获得焦点
-        focus() {
+        focus(e) {
             console.info("获得焦点");
+            this.triggerEvent("searchFocus", e);
+
         },
         //搜索框-失去焦点
-        blur() {
+        blur(e) {
             console.info('失去焦点')
+            this.triggerEvent("searchBlur",e)
         },
         //搜索框-输入
         input(e) {
@@ -85,12 +88,12 @@ Component({
                     clearFlag: false,
                 })
             }
-            //this.triggerEvent("searchList", e);
+            this.triggerEvent("searchInput", e);
         },
         //搜索框-查询
         confirm(e) {
-            console.info('查询', e)
-            this.triggerEvent("endsearchList");
+            console.info('搜索框-查询', e)
+            this.triggerEvent("searchConfirm", e);
         },
         //搜索框-清空
         clear(e) {
@@ -101,7 +104,7 @@ Component({
                 clearFlag: false,
             })
             console.info('清空搜索框后 content', this.data.content)
-            //this.triggerEvent("clearSearch");
+            this.triggerEvent("searchClear");
         },
         //设置样式（状态栏高度，导航栏高度）
         setStyle: function () {

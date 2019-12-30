@@ -19,9 +19,9 @@
         <view class="search-bar-inner" wx:if="{{search}}">
             <view class=" search-bar ">
                 <icon type='search'></icon>
-                <input type="text " bindinput="input" bindconfirm="confirm" bindfocus="focus" bindblur="blur" confirm-type='search' value='{{content}}' placeholder='请输入...' />
+                <input type="text" bindinput="input" bindconfirm="confirm" bindfocus="focus" bindblur="blur" confirm-type='search' value='{{content}}' placeholder='请输入...' />
                 <block wx:if="{{clearFlag}}">
-                    <icon bindtap="clear " type='clear'></icon>
+                    <icon bindtap="clear" type='clear'></icon>
                 </block>
             </view>
         </view>

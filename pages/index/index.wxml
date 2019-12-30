@@ -1,6 +1,6 @@
 <!-- index.wxml -->
 <view class="container">
-    <navBar title='测试导航栏' back='true' home='true' search="true" backgroundColor='#123123'></navBar>
+    <navBar title='测试导航栏' search="true" backgroundColor='#123123'></navBar>
     <view class='main'>
         <view class='p'>有返回和home的页面</view>
     </view>
